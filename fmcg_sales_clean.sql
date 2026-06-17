@@ -1,0 +1,30 @@
+CREATE VIEW fmcg_sales_clean AS
+SELECT
+	order_id,
+	CAST(order_date AS DATE) AS orderdate,
+	DATEPART(YEAR, CAST(order_date AS datetime)) AS year,
+	quarter,
+	DATENAME(month, DATEADD(month, month - 1, 0)) AS month,
+	region,
+	country,
+	city,
+	sales_person,
+	customer_type,
+	sales_channel,
+	promotion_type,
+	product_category,
+	brand,
+	product_name,
+	sku,
+	units_sold,
+	unit_price_usd,
+	discount_pct,
+	gross_sales_usd,
+	marketing_spend_usd,
+	cogs_usd,
+	logistics_cost_usd,
+	net_revenue_usd,
+	profit_usd,
+	profit_margin_pct
+FROM fmcg_sales
+

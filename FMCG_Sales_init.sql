@@ -1,0 +1,6 @@
+USE MASTER;
+
+CREATE DATABASE FMCG_Sales; 
+
+USE FMCG_Sales;
+
